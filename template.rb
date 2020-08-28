@@ -54,6 +54,11 @@ def add_tailwind
   insert_into_file "postcss.config.js", "    require(\"tailwindcss\"),\n    require(\"autoprefixer\"),\n", after: "plugins: [\n"
 end
 
+def add_stimulus
+  puts "Installing Stimulus..."
+  rails_command "webpacker:install:stimulus"
+end
+
 def add_users
   # Install Devise
   generate "devise:install"
@@ -124,6 +129,7 @@ after_bundle do
   set_application_name
   stop_spring
   add_tailwind
+  add_stimulus
   add_users
   # add_sidekiq
 
