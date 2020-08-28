@@ -8,5 +8,4 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("stylesheets/application.scss")
-
-window.Rails = Rails
+require("../controllers/index")

@@ -34,10 +34,10 @@ def rails_6?
 end
 
 def add_gems
-  gem 'devise', '~> 4.7', '>= 4.7.0'
+  gem 'devise', '~> 4.7', '>= 4.7.2'
   gem 'devise-tailwinded', '~> 0.1.5'
-  gem 'font-awesome-sass', '~> 5.6', '>= 5.6.1'
-  gem 'name_of_person', '~> 1.1'
+  gem 'font-awesome-sass', '~> 5.13.0'
+  gem 'name_of_person', '~> 1.1.1'
 end
 
 def set_application_name
@@ -63,7 +63,7 @@ def add_users
               env: 'development'
   route "root to: 'home#index'"
 
-  # Devise notices are installed via Tailwind CSS
+  # Devise notifications are installed via Tailwind CSS
   generate "devise:views:tailwinded"
 
   # Create Devise User
