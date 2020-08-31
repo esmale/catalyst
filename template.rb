@@ -130,6 +130,9 @@ after_bundle do
   stop_spring
   add_tailwind
   add_stimulus
+
+  run "yarn add tailwindcss-stimulus-components"
+
   add_users
   # add_sidekiq
 
